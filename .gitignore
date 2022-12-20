@@ -1,129 +1,147 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-pip-wheel-metadata/
-share/python-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
-
-# PyInstaller
-#  Usually these files are written by a python script from a template
-#  before PyInstaller builds the exe, so as to inject date/other infos into it.
-*.manifest
-*.spec
-
-# Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
-
-# Unit test / coverage reports
-htmlcov/
-.tox/
-.nox/
-.coverage
-.coverage.*
-.cache
-nosetests.xml
-coverage.xml
-*.cover
-*.py,cover
-.hypothesis/
-.pytest_cache/
-
-# Translations
-*.mo
-*.pot
-
-# Django stuff:
-*.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-
-# Flask stuff:
-instance/
-.webassets-cache
-
-# Scrapy stuff:
-.scrapy
-
-# Sphinx documentation
-docs/_build/
-
-# PyBuilder
-target/
-
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# IPython
-profile_default/
-ipython_config.py
-
-# pyenv
-.python-version
-
-# pipenv
-#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
-#   However, in case of collaboration, if having platform-specific dependencies or dependencies
-#   having no cross-platform support, pipenv may install dependencies that don't work, or not
-#   install all needed dependencies.
-#Pipfile.lock
-
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow
-__pypackages__/
-
-# Celery stuff
-celerybeat-schedule
-celerybeat.pid
-
-# SageMath parsed files
-*.sage.py
-
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
-
-# Spyder project settings
-.spyderproject
-.spyproject
-
-# Rope project settings
-.ropeproject
-
-# mkdocs documentation
-/site
-
-# mypy
-.mypy_cache/
-.dmypy.json
-dmypy.json
-
-# Pyre type checker
-.pyre/
+class Elethant:
+    def __init__(self, name, age, consumesFoodPerDay, mass):
+        self.__nameOfView = "Марсианский слон"
+        self.__biom = "Марс"
+        self.__squarePerOne = 7
+        self.__ration = ['говядина', 'баранина', 'козлятина']
+        self.__sound = "АФ-АФ"
+        self.__name = name
+        self.__consumesFoodPerDay = consumesFoodPerDay
+        self.__age = age
+        self.__mass = mass
+        self.foodVulumeForOneFiding = consumesFoodPerDay / 3
+    @property
+    def nameOfView(self):
+        return self.__nameOfView
+    @property
+    def biom(self):
+        return self.__biom
+    @property
+    def squarePerOne(self):
+        return self.__squarePerOne
+    @property
+    def ration(self):
+        return self.__ration
+    @property
+    def sound(self):
+        return self.__sound
+    @property
+    def name(self):
+        return self.__name
+    @property
+    def consumesFoodPerDay(self):
+        return self.__consumesFoodPerDay
+    @property
+    def age(self):
+        return self.__age
+    @property
+    def mass(self):
+        return self.__mass
+    def Play(self):
+        print(self.__name, " поиграл с игрушечной косточкой.")
+    def MakeSound(self):
+        print(self.__name, ": ", self.__sound)
+    def Eat(self, food, portion):
+        if food in self.__ration:
+            print(self.__name, " покушал.")
+            self.__mass += portion
+        else:
+            print(self.__name, "отказался кушать. Эта еда не входит в рацион..")
+class Tiger:
+    def __init__(self, name, age, consumesFoodPerDay, mass):
+        self.__nameOfView = "Тигр красный"
+        self.__biom = "Санкт-Петербург"
+        self.__squarePerOne = 10
+        self.__ration = ['банан', 'кабан', 'пятнистый олень', 'фазан', 'заяц', 'барсук']
+        self.__sound = "Рррр"
+        self.__name = name
+        self.__consumesFoodPerDay = consumesFoodPerDay
+        self.__age = age
+        self.__mass = mass
+        self.foodVulumeForOneFiding = consumesFoodPerDay / 3
+    @property
+    def nameOfView(self):
+        return self.__nameOfView
+    @property
+    def biom(self):
+        return self.__biom
+    @property
+    def squarePerOne(self):
+        return self.__squarePerOne
+    @property
+    def ration(self):
+        return self.__ration
+    @property
+    def sound(self):
+        return self.__sound
+    @property
+    def name(self):
+        return self.__name
+    @property
+    def consumesFoodPerDay(self):
+        return self.__consumesFoodPerDay
+    @property
+    def age(self):
+        return self.__age
+    @property
+    def mass(self):
+        return self.__mass
+    def Play(self):
+        print(self.__name, " поигрался с хвостиком.")
+    def MakeSound(self):
+        print(self.__name, ": ", self.__sound)
+    def Eat(self, food, portion):
+        if food in self.__ration:
+            print(self.__name, " покушал.")
+            self.__mass += portion
+        else:
+            print(self.__name, "отказался кушать. Эта еда не входит в рацион красных львов.")
+class Pingvim:
+    def __init__(self, name, age, consumesFoodPerDay, mass):
+        self.__nameOfView = "Камский Пингивин"
+        self.__biom = "Кам"
+        self.__squarePerOne = 10
+        self.__ration = ["рыба", "кабан", "пятнистый олень", "изюбрь"]
+        self.__sound = "Рррр"
+        self.__name = name
+        self.__consumesFoodPerDay = consumesFoodPerDay
+        self.__age = age
+        self.__mass = mass
+        self.__necessaryfoodVulumeForOneFiding = consumesFoodPerDay / 3
+    @property
+    def nameOfView(self):
+        return self.__nameOfView
+    @property
+    def biom(self):
+        return self.__biom
+    @property
+    def squarePerOne(self):
+        return self.__squarePerOne
+    @property
+    def ration(self):
+        return self.__ration
+    @property
+    def sound(self):
+        return self.__sound
+    @property
+    def name(self):
+        return self.__name
+    @property
+    def consumesFoodPerDay(self):
+        return self.__consumesFoodPerDay
+    @property
+    def age(self):
+        return self.__age
+    @property
+    def mass(self):
+        return self.__mass
+    def Play(self):
+        print(self.__name, " поигрался с мячиком.")
+    def MakeSound(self):
+        print(self.__name, ": ", self.__sound)
+    def Eat(self, food, portion):
+        if food in self.__ration:
+            print(self.__name, " покушал.")
+        else:
+            print(self.__name, "отказался кушать. Данная еда не входит в рацион пингвинов.")
+            self.__mass += portion
